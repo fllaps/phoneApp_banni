@@ -1,0 +1,16 @@
+<ion-side-menus>
+    <div ng-include="'pages/include/ionSide.html'"></div>
+    <ion-side-menu-content>
+        <div ng-include="'pages/include/header.html'"></div>
+        <ion-content class="has-header">
+           <ion-slide-box on-slide-changed="slideHasChanged($index)" does-continue="true" slide-interval="1500" auto-play="true" active-slide="slide.activeIndex" show-pager="true" pager-click="toIndex($index)">
+               <ion-slide ng-repeat="img in hcList">
+                   <div class="box">
+                       <a href="#/children"><img ng-src="img/{{img.image}}" alt="" class="img-responsive"/></a>
+                   </div>
+               </ion-slide>
+           </ion-slide-box>
+        </ion-content>
+    </ion-side-menu-content>
+</ion-side-menus>
+<div ng-include="'pages/include/footer.html'"></div>

@@ -1,0 +1,79 @@
+#header,#footer{
+    background-color: #0FBEF5;
+}
+#side{
+    background-color: #0FBEF5;
+
+}
+#side ul{
+    border:none;
+    margin: 20px 10px;
+    overflow: hidden;
+}
+#side ul li{
+    border:none;
+    background-color: #0FBEF5;
+}
+#side ul li a{
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #C6D1D6;
+}
+
+.img-responsive{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.center{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.card-background-page {
+    position: relative;
+    text-align: right;
+}
+
+
+.card-title {
+    position: absolute;
+    top: 36%;
+    right: 10%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #3ED7FF;
+}
+
+.card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #1A7690;
+}
+.card-title2 {
+    text-align: left;
+    position: absolute;
+    top: 36%;
+    left: 10%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #3ED7FF;
+}
+
+.card-subtitle2 {
+    text-align: left;
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #1A7690;
+}
+

@@ -1,0 +1,89 @@
+var app=angular.module('banni',['ionic']);
+app.config(function($stateProvider,$urlRouterProvider,$ionicConfigProvider){
+    $ionicConfigProvider.tabs.position('buttom')
+    $stateProvider.state('banniNew',{
+        url:'/banniNew',
+        templateUrl:'pages/new.html'
+    }).state('banniProductInfo',{
+        url:'/banniProductInfo',
+        templateUrl:'pages/productInfo.html'
+    }).state('banniProductSp',{
+        url:'/banniProductSp',
+        templateUrl:'pages/productSp.html'
+    }).state('banniLife',{
+        url:'/banniLife',
+        templateUrl:'pages/life.html',
+        controller:'lifeCtrl'
+    }).state('banniHappyChildren',{
+        url:'/banniHappyChildren',
+        templateUrl:'pages/happyChildren.html',
+        controller:'happyCtrl'
+    }).state('banniMore',{
+        url:'/banniMore',
+        templateUrl:'pages/more.html'
+    }).state('banniOur',{
+        url:'/banniOur',
+        templateUrl:'pages/our.html'
+    }).state('banniHistory',{
+        url:'/banniHistory',
+        templateUrl:'pages/history.html'
+    }).state('banniIntroduce',{
+        url:'/banniIntroduce',
+        templateUrl:'pages/introduce.html'
+    }).state('banniFunction',{
+        url:'/banniFunction',
+        templateUrl:'pages/function.html'
+    }).state('children',{
+        url:'/children',
+        templateUrl:'pages/chidren.html'
+    })
+    $urlRouterProvider.otherwise('/banniNew');
+})
+app.controller('bodyCtrl',['$scope','$state','$ionicSlideBoxDelegate',function($scope,$state,$ionicSlideBoxDelegate){
+    $scope.jump=function(desPath){
+        $state.go(desPath);
+    }
+    $ionicSlideBoxDelegate.update();
+    $scope.slide={
+        activeIndex:'1'
+    }
+    $scope.toIndex=function(index){
+        $scope.slide.activeIndex=index;
+    }
+    $scope.se=0;
+    $scope.circle=function(){
+        if($scope.se==0){
+            $ionicSlideBoxDelegate.stop();
+            $scope.se=1;
+        }else if($scope==1){
+            $ionicSlideBoxDelegate.start();
+            $scope.se=0;
+        }
+    }
+
+
+    }])
+app.controller('lifeCtrl',['$scope',function($scope){
+    $scope.imageList=[
+        {image:'life_1.jpg'},
+        {image:'li_2.jpg'},
+        {image:'li_3.jpg'},
+        {image:'li_4.jpg'},
+        {image:'li_5.jpg'},
+        {image:'li_7.jpg'},
+        {image:'li_9.jpg'},
+        {image:'li_10.jpg'},
+        {image:'li_6.jpg'},
+        {image:'li_8.jpg'}
+    ]
+}])
+app.controller('happyCtrl',['$scope',function($scope){
+    $scope.hcList=[
+        {image:'hayyy_1.jpg'},
+        {image:'hayyy_2.jpg'},
+        {image:'hayyy_3.jpg'},
+        {image:'hayyy_4.jpg'},
+        {image:'hayyy_5.jpg'},
+        {image:'hayyy_6.jpg'}
+    ]
+}])

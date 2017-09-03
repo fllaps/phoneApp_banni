@@ -1,0 +1,22 @@
+<ion-side-menus>
+    <div ng-include="'pages/include/ionSide.html'"></div>
+    <ion-side-menu-content>
+        <div ng-include="'pages/include/header.html'"></div>
+        <ion-content class="has-header">
+            <div class="card">
+                <div class="item item-divider">
+                    <a href="#/banniNew">首页</a>
+                    /
+                    <span>智能生活</span>
+                </div>
+                <div class="item" id="life">
+                    <div ng-repeat="img in imageList">
+                        <img ng-src="img/{{img.image}}"  class="img-responsive" alt=""/>
+                        <br/>
+                    </div>
+                </div>
+            </div>
+        </ion-content>
+    </ion-side-menu-content>
+</ion-side-menus>
+<div ng-include="'pages/include/footer.html'"></div>
